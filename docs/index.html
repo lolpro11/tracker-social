@@ -1,25 +1,29 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <script type="text/javascript">
-        function GetURLParameter(sParam)
-        {
-            var sPageURL = window.location.search.substring(1);
-            var sURLVariables = sPageURL.split('&');
-            for (var i = 0; i < sURLVariables.length; i++) 
-            {
-                var sParameterName = sURLVariables[i].split('=');
-                if (sParameterName[0] == sParam) 
-                {
-                    return sParameterName[1];
-                }
-            }
-        }​
-        var tech = GetURLParameter('text');
-        document.getElementById("demo").innerHTML = text;
-        </script>
     </head>
     <body>
+        <script type="text/javascript">
+            function GetURLParameter(sParam)
+            {
+                var sPageURL = window.location.search.substring(1);
+                var sURLVariables = sPageURL.split('&');
+                for (var i = 0; i < sURLVariables.length; i++) 
+                {
+                    var sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] == sParam) 
+                    {
+                        return sParameterName[1];
+                    }
+                }
+            }​
+            var tech = GetURLParameter('text');
+            </script>
+    
         <p id="demo"></p>
+
+        <script>
+            document.getElementById("demo").innerHTML = text;
+        </script>
     </body>
 </html>
