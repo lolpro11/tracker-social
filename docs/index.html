@@ -1,8 +1,7 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-    </head>
-    <body>
+        <script type="text/javascript">
         function GetURLParameter(sParam)
         {
             var sPageURL = window.location.search.substring(1);
@@ -17,6 +16,10 @@
             }
         }​
         var tech = GetURLParameter('text');
-        <p> <var>tech</var> </p>
+        document.getElementById("demo").innerHTML = text;
+        </script>
+    </head>
+    <body>
+        <p id="demo"></p>
     </body>
 </html>
