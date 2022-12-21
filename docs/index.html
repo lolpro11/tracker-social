@@ -1,12 +1,22 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="5; url=https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-        <script type="text/javascript">
-            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        </script>
     </head>
     <body>
-        If you are not redirected automatically, follow this <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>link to example</a>.
+        function GetURLParameter(sParam)
+        {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) 
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1];
+                }
+            }
+        }​
+        var tech = GetURLParameter('text');
+        <p> <var>tech</var> </p>
     </body>
 </html>
